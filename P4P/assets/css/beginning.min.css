@@ -1,0 +1,24 @@
+.beginning__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 4.5rem;
+}
+.beginning__title {
+  max-width: 30rem;
+}
+.beginning__descr {
+  display: flex;
+  justify-content: space-between;
+  gap: 4.5rem;
+  margin-bottom: 50px;
+}
+.beginning__text {
+  max-width: 340px;
+}
+.beginning__text:first-child {
+  max-width: 595px;
+}
+.beginning__img {
+  width: 986px;
+  height: auto;
+}
