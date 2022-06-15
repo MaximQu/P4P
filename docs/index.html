@@ -6,6 +6,7 @@
    <link rel="prefetch" href="assets/fonts/e-Ukraine-UltraLight.woff2" as="font" type="font/woff2" crossorigin>
    <link rel="prefetch" href="assets/fonts/e-Ukraine-Light.woff2" as="font" type="font/woff2" crossorigin>
    <link rel="prefetch" href="assets/fonts/e-Ukraine-Regular.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="prefetch" href="assets/fonts/e-Ukraine-Medium.woff2" as="font" type="font/woff2" crossorigin>
    <link rel="prefetch" href="assets/fonts/e-Ukraine-Bold.woff2" as="font" type="font/woff2" crossorigin>
    <!-- Styles -->
    <link rel="stylesheet" href="assets/css/style.min.css">
@@ -47,22 +48,35 @@
    <header class="header">
       <div class="container">
          <div class="header__inner">
-            <a href="index.html" class="logo__link">
-               <img src="assets/images/svg/logo.svg" alt="People for people" width="54" height="64" class="logo__img">
-            </a>
+            <div class="header__block">
+               <a href="index.html" class="logo__link">
+                  <img src="assets/images/svg/logo.svg" alt="People for people" width="54" height="64" class="logo__img">
+               </a>
+               <svg class="header__icon">
+                  <use xlink:href="#restart"></use>
+               </svg>
+            </div>
             <nav class="nav">
                <ul class="nav__list">
-                  <li class="nav__item">
-                     <a href="#" class="nav__link underline" id="#about">Про нас</a>
-                  </li>
                   <li class="nav__item">
                      <a href="#" class="nav__link underline" id="#explanation">Як це працює?</a>
                   </li>
                   <li class="nav__item">
-                     <a href="#" class="nav__link underline" id="#stream">Пряма трансляцiя</a>
+                     <a href="#" class="nav__link underline" id="#about">Вигляд кемпу</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link underline" id="#stream">Контакти</a>
+                  </li>
+                  <li class="nav__item">
+                     <button class="nav__link underline modal-btn">Хочу до кемпу</button>
                   </li>
                </ul>
             </nav>
+            <div class="burger__menu">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
             <div class="header__wrapp">
                <ul class="lang__list">
                   <li class="lang__item">
@@ -72,12 +86,7 @@
                      <a href="#" class="lang__link">UA</a>
                   </li>
                </ul>
-               <a href="#" class="header__btn btn btn--full">Підтримати проект</a>
-            </div>
-            <div class="burger__menu">
-               <span></span>
-               <span></span>
-               <span></span>
+               <button class="header__btn btn modal-btn">Хочу до кемпу</button>
             </div>
          </div>
       </div>
@@ -92,110 +101,228 @@
                   <h1 class="hero__title">«РЕСТАРТ» – сильні люди вільної України</h1>
                   <div class="hero__wrapp">
                       <a href="#" class="hero__btn btn btn--full">Дивитися трейлер</a>
-                      <a href="#" class="hero__btn btn">Хочу до кемпу</a>
+                      <a href="#" class="hero__btn btn">Підтримати проект</a>
                   </div>
                   <span class="hero__subtext">Допомагаємо і заряджаємо енергією</span>
               </div>
           </div>
       </section>
       <!-- ./hero -->
-      <!-- beginning -->
-      <section class="beginning">
-          <div class="container">
-              <div class="beginning__inner">
-                  <h2 class="beginning__title">З чього все почалося?</h2>
-                  <div class="beginning__wrapp">
-                      <div class="beginning__descr">
-                          <q class="beginning__text">Я знаю страх і тревогу. Спочатку тобі здається, що ти можеш здолати все, потім виявляється, що ні. І коли це відбувається, ти або знаходиш сили жити далі, або…</q>
-                          <q class="beginning__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</q>
+      <div class="main__block">
+          <!-- beginning -->
+          <section class="beginning">
+              <div class="container">
+                  <div class="beginning__inner">
+                      <div class="beginning__heading">
+                          <h2 class="beginning__title">З чього все почалося?</h2>
+                          <svg>
+                              <use xlink:href="#tripo"></use>
+                          </svg>
                       </div>
-                      <div class="beginning__block">
-                          <img src="https://via.placeholder.com/986x500" alt="" class="beginning__img">
+                      <div class="beginning__wrapp">
+                          <div class="beginning__descr">
+                              <q class="beginning__text">Я знаю страх і тревогу. Спочатку тобі здається, що ти можеш здолати все, потім виявляється, що ні. І коли це відбувається, ти або знаходиш сили жити далі, або…</q>
+                              <q class="beginning__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</q>
+                          </div>
+                          <div class="beginning__block">
+                              <picture>
+                                  <source srcset="assets/images/beginning/beginning-img.webp" type="image/webp">
+                                  <img src="assets/images/beginning/beginning-img.jpg" alt="З чього все почалося?" class="beginning__img" width="3000" height="1688" />
+                              </picture>
+                          </div>
                       </div>
                   </div>
               </div>
-          </div>
-      </section>
-      <!-- ./beginning -->
-      <!-- reminder -->
-      <section class="reminder">
-          <div class="container">
-              <div class="reminder__inner">
-                  <h2 class="reminder__title">Війна триває</h2>
-                  <div class="reminder__wrapp">
-                      <p class="reminder__text">Люди постійно перебувають під впливом напруги, яка породжує емоційні та психологічні стреси.</p>
-                      <p class="reminder__text">Вся сила в єдності – створимо затишок і сприятливі умови для інтенсивного відновлення людей разом.</p>
+          </section>
+          <!-- ./beginning -->
+          <picture>
+              <source srcset="assets/images/main-block-bg-img.webp" type="image/webp">
+              <img src="assets/images/main-block-bg-img.png" class="main__block-img" alt="" width="717" height="315" />
+          </picture>
+          <!-- reminder -->
+          <section class="reminder">
+              <div class="container">
+                  <div class="reminder__inner">
+                      <h2 class="reminder__title">Війна триває</h2>
+                      <div class="reminder__wrapp">
+                          <p class="reminder__text">Люди постійно перебувають під впливом напруги, яка породжує емоційні та психологічні стреси.
+                          <p class="reminder__text emphasis">
+                              <strong>Вся сила в єдності</strong> – разом створимо затишок та сприятливі умови для інтенсивного відновлення людей
+                          </p>
+                      </div>
                   </div>
               </div>
-          </div>
-      </section>
-      <!-- ./reminder -->
+          </section>
+          <!-- ./reminder -->
+      </div>
       <!-- slider -->
       <section class="slider__info">
           <div class="container">
               <div class="slider">
                   <ul class="slider__list swiper-wrapper">
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-1.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-1.jpg" class="slider__img" alt="" width="688" height="1030" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-2.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-2.jpg" class="slider__img" alt="" width="1470" height="980" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-3.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-3.jpg" class="slider__img" alt="" width="1631" height="918" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-4.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-4.jpg" class="slider__img" alt="" width="880" height="880" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-5.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-5.jpg" class="slider__img" alt="" width="2735" height="4096" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-6.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-6.jpg" class="slider__img" alt="" width="687" height="1031" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-7.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-7.jpg" class="slider__img" alt="" width="2940" height="1960" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-8.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-8.jpg" class="slider__img" alt="" width="1470" height="980" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                       <li class="slider__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x405" class="slider__img" alt="">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-9.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-9.jpg" class="slider__img" alt="" width="1559" height="944" />
+                          </picture>
                           <div class="slider__wrapp">
                               <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
-                              <a href="#" class="slider__link underline">Дивитися більше</a>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                      </li>
+                      <li class="slider__item swiper-slide">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-10.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-10.jpg" class="slider__img" alt="" width="800" height="536" />
+                          </picture>
+                          <div class="slider__wrapp">
+                              <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                      </li>
+                      <li class="slider__item swiper-slide">
+                          <picture>
+                              <source srcset="assets/images/slider-info/slider-info-11.webp" type="image/webp">
+                              <img src="assets/images/slider-info/slider-info-11.jpg" class="slider__img" alt="" width="1470" height="980" />
+                          </picture>
+                          <div class="slider__wrapp">
+                              <p class="slider__text">Коли людина перестає відчувати біль, у неї з’являється бажання жити.</p>
+                              <a href="#" class="slider__link">
+                                  <span class="underline">Дивитися більше</span>
+                                  <svg>
+                                      <use xlink:href="#small-arrow-right"></use>
+                                  </svg>
+                              </a>
                           </div>
                       </li>
                   </ul>
@@ -207,7 +334,7 @@
                   </div>
                   <div class="swiper-button swiper-button-next">
                       <svg>
-                          <use xlink:href="#arrow-left"></use>
+                          <use xlink:href="#arrow-left"></use>4
                       </svg>
                   </div>
               </div>
@@ -217,21 +344,50 @@
       <!-- about -->
       <section class="about">
           <div class="container">
+              <div class="about__bg">
+                  <picture>
+                      <source srcset="assets/images/about/about-bg.webp" type="image/webp">
+                      <img src="assets/images/about/about-bg.jpg" alt="" class="about__bg-img" width="2940" height="1960" />
+                  </picture>
+              </div>
               <div class="about__inner">
                   <div class="about__sidebar">
-                      <h2 class="about__title">Благодійний фонд P4P ВЖЕ створив Кемп <span>«РЕСТАРТ»</span> зі сприятливими умовами, де люди:</h2>
-                      <a href="#" class="about__btn btn btn--full">Більше інформації</a>
+                      <div class="about__wrapp">
+                          <h2 class="about__title">Благодійний фонд P4P ВЖЕ створив Кемп <span>«РЕСТАРТ»</span> зі сприятливими умовами, де люди:</h2>
+                          <button class="about__btn btn modal-btn">Хочу Рестартнути!</button>
+                      </div>
+                      <div class="about__block">
+                          <picture>
+                              <source srcset="assets/images/about/about-img.webp" type="image/webp">
+                              <img src="assets/images/about/about-img.png" alt="" width="390" height="250" />
+                          </picture>
+                      </div>
                   </div>
                   <div class="about__content">
                       <ul class="about__list">
-                          <li class="about__item">Безкоштовно проживають і харчуються</li>
-                          <li class="about__item">Отримують допомогу психолога</li>
-                          <li class="about__item">Ведуть активний спосіб життя: байдарки, прогулянки на велосипедах та інше</li>
-                          <li class="about__item">Спілкуються з однодумцями</li>
-                          <li class="about__item">Відпочивають <strong>8</strong> днів у безпечному регіоні України, де немає сирен</li>
-                          <li class="about__item">Проходять комплексну групову терапію</li>
+                          <li class="about__item">
+                              <p>Безпечні ранки і спокійні сни</p>
+                          </li>
+                          <li class="about__item">
+                              <p>Обіди на відкритому повітрі</p>
+                          </li>
+                          <li class="about__item">
+                              <p>Цікаві програми: байдарки, піші та велосипедні екскурсії, риболовля</p>
+                          </li>
+                          <li class="about__item">
+                              <p>Вечори у гарній компанії біля багаття</p>
+                          </li>
+                          <li class="about__item">
+                              <p>Допомога психолога</p>
+                          </li>
+                          <li class="about__item">
+                              <p>Спілкування з однодумцями</p>
+                          </li>
+                          <li class="about__item">
+                              <p>Знайдіть своє місце у новому світі</p>
+                          </li>
                       </ul>
-                      <p class="about__text">Знаходять своє місце у новому свті</p>
+                      <p class="about__text">Доєднуйся до ком’юніті проактивних Українців! Знайдемо своє місце у новому світі!</p>
                   </div>
               </div>
           </div>
@@ -240,29 +396,74 @@
       <!-- explanation -->
       <section class="explanation">
           <div class="container">
+              <div class="explanation-heading">
+                  <h2 class="explanation-heading__title">
+                      Кожна твоя гривня конвертується в <strong>БЛАГОДІЙНІСТЬ</strong>
+                  </h2>
+                  <div class="explanation-heading__wrapp">
+                      <p class="explanation-heading__text">Не втрачай нагоди використати цю можливість! Оплати відпочинок в кемпі і подаруй рестарт тим, кому це необхідно.</p>
+                      <a href="#" class="explanation-heading__link btn">Подарувати можливість</a>
+                  </div>
+              </div>
               <div class="explanation__inner">
                   <div class="explanation__bar">
                       <h2 class="explanation__title">Як це працює</h2>
-                      <p class="explanation__info">Відпочивають 8 днів у безпечному регіоні України, де немає сирен</p>
+                      <picture>
+                          <source srcset="assets/images/explanation/diagram.webp" type="image/webp">
+                          <img src="assets/images/explanation/diagram.png" alt="Як це працює" width="722" height="396" />
+                      </picture>
                   </div>
                   <ul class="explanation__list">
                       <li class="explanation__item">
-                          <p class="explanation__text">
-                              <span class="explanation__num">1</span> Разом шукаємо нові можливості
-                          </p>
-                          <img src="https://via.placeholder.com/290x285" alt="" class="explanation__img">
+                          <div class="explanation__wrapp">
+                              <div class="explanation__icon">
+                                  <svg>
+                                      <use xlink:href="#explanation-1"></use>
+                                  </svg>
+                              </div>
+                              <span>Вчора</span>
+                              <p class="explanation__text">Підтримуємо один одного</p>
+                          </div>
+                          <div class="explanation__block">
+                              <picture>
+                                  <source srcset="assets/images/explanation/explanation-img-1.webp" type="image/webp">
+                                  <img src="assets/images/explanation/explanation-img-1.jpg" alt="Підтримуємо один одного" class="explanation__img" width="576" height="720" />
+                              </picture>
+                          </div>
                       </li>
                       <li class="explanation__item">
-                          <p class="explanation__text">
-                              <span class="explanation__num">2</span> Навчаємо знову радіти життю
-                          </p>
-                          <img src="https://via.placeholder.com/290x285" alt="" class="explanation__img">
+                          <div class="explanation__wrapp">
+                              <div class="explanation__icon">
+                                  <svg>
+                                      <use xlink:href="#explanation-2"></use>
+                                  </svg>
+                              </div>
+                              <span>Сьогодні</span>
+                              <p class="explanation__text">Навчаємо знову радіти життю</p>
+                          </div>
+                          <div class="explanation__block">
+                              <picture>
+                                  <source srcset="assets/images/explanation/explanation-img-2.webp" type="image/webp">
+                                  <img src="assets/images/explanation/explanation-img-2.jpg" alt="Навчаємо знову радіти життю" class="explanation__img" width="720" height="480" />
+                              </picture>
+                          </div>
                       </li>
                       <li class="explanation__item">
-                          <p class="explanation__text">
-                              <span class="explanation__num">3</span> Підтримуємо один одного
-                          </p>
-                          <img src="https://via.placeholder.com/290x285" alt="" class="explanation__img">
+                          <div class="explanation__wrapp">
+                              <div class="explanation__icon">
+                                  <svg>
+                                      <use xlink:href="#explanation-3"></use>
+                                  </svg>
+                              </div>
+                              <span>Завжди</span>
+                              <p class="explanation__text">Шукаємо нові можливості</p>
+                          </div>
+                          <div class="explanation__block">
+                              <picture>
+                                  <source srcset="assets/images/explanation/explanation-img-3.webp" type="image/webp">
+                                  <img src="assets/images/explanation/explanation-img-3.jpg" alt="Шукаємо нові можливості" class="explanation__img" width="720" height="540" />
+                              </picture>
+                          </div>
                       </li>
                   </ul>
               </div>
@@ -271,50 +472,85 @@
       <!-- ./explanation -->
       <!-- stream -->
       <section class="stream">
-          <video class="stream-live" width="320" height="240" autoplay muted>
-              <source src="assets/images/video.mp4" type="video/mp4">
-          </video>
           <div class="container">
-              <div class="stream__slider">
-                  <ul class="stream__list swiper-wrapper">
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                      <li class="stream__item swiper-slide">
-                          <img src="https://via.placeholder.com/300x180" alt="" class="stream__img">
-                      </li>
-                  </ul>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button swiper-button-prev">
-                      <svg>
-                          <use xlink:href="#arrow-left"></use>
-                      </svg>
+              <div class="stream__inner">
+                  <div class="slider-main">
+                      <ul class="slider-main__list swiper-wrapper">
+                          <li class="slider-main__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-1.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-1.jpg" alt="" class="slider-main__img" width="2656" height="1120" />
+                              </picture>
+                          </li>
+                          <li class="slider-main__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-2.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-2.jpg" alt="" class="slider-main__img" width="1470" height="980" />
+                              </picture>
+                          </li>
+                          <li class="slider-main__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-3.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-3.jpg" alt="" class="slider-main__img" width="1559" height="944" />
+                              </picture>
+                          </li>
+                          <li class="slider-main__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-4.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-4.jpg" alt="" class="slider-main__img" width="800" height="536" />
+                              </picture>
+                          </li>
+                          <li class="slider-main__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-1.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-1.jpg" alt="" class="slider-main__img" width="2656" height="1120" />
+                              </picture>
+                          </li>
+                      </ul>
+                      <div class="swiper-button swiper-button-prev">
+                          <svg>
+                              <use xlink:href="#arrow-left"></use>
+                          </svg>
+                      </div>
+                      <div class="swiper-button swiper-button-next">
+                          <svg>
+                              <use xlink:href="#arrow-left"></use>
+                          </svg>
+                      </div>
                   </div>
-                  <div class="swiper-button swiper-button-next">
-                      <svg>
-                          <use xlink:href="#arrow-left"></use>
-                      </svg>
+                  <div class="slider-minor">
+                      <ul class="slider-minor__list swiper-wrapper">
+                          <li class="slider-minor__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-1.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-1.jpg" alt="" class="slider-minor__img" width="2656" height="1120" />
+                              </picture>
+                          </li>
+                          <li class="slider-minor__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-2.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-2.jpg" alt="" class="slider-minor__img" width="1470" height="980" />
+                              </picture>
+                          </li>
+                          <li class="slider-minor__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-3.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-3.jpg" alt="" class="slider-minor__img" width="1559" height="944" />
+                              </picture>
+                          </li>
+                          <li class="slider-minor__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-4.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-4.jpg" alt="" class="slider-minor__img" width="800" height="536" />
+                              </picture>
+                          </li>
+                          <li class="slider-minor__item swiper-slide">
+                              <picture>
+                                  <source srcset="assets/images/stream/stream-img-1.webp" type="image/webp">
+                                  <img src="assets/images/stream/stream-img-1.jpg" alt="" class="slider-minor__img" width="2656" height="1120" />
+                              </picture>
+                          </li>
+                      </ul>
                   </div>
               </div>
           </div>
@@ -327,13 +563,13 @@
                   <div class="location__heading">
                       <h2 class="location__title">Місце розташування</h2>
                       <div class="location__wrapp">
-                          <p class="location__text">Передмістя обласного чи районного центру, в безпечному регіоні України та у гармонії з природою.</p>
-                          <a href="#" class="location__link btn btn--full">Хочу в кемп</a>
+                          <p class="location__text">Передмістя районного центру, в безпечному регіоні України та у гармонії з природою.</p>
+                          <button class="location__link btn modal-btn">Хочу до кемпу</button>
                       </div>
                   </div>
                   <picture>
-                      <source srcset="assets/images/location-img.webp" type="image/webp">
-                      <img src="assets/images/location-img.png" class="location__img" alt="" width="1241" height="736" />
+                      <source srcset="assets/images/location/location-img.webp" type="image/webp">
+                      <img src="assets/images/location/location-img.png" class="location__img" alt="Місце розташування" width="1378" height="1147" />
                   </picture>
               </div>
           </div>
@@ -342,24 +578,30 @@
       <!-- help -->
       <section class="help">
           <div class="container">
+              <div class="help__bg">
+                  <picture>
+                      <source srcset="assets/images/help/help-bg.webp" type="image/webp">
+                      <img class="help__img" src="assets/images/help/help-bg.jpg" alt="" width="800" height="1000" />
+                  </picture>
+              </div>
               <div class="help__inner">
                   <div class="help__wrapp">
-                      <h2 class="help__title h2-like">Як ви можете допомогти проекту?</h2>
+                      <h2 class="help__title h2-like">Кожна гривня важлива</h2>
                       <div class="help__donation">
-                          <p class="help__text">Твоя підтримка має величезне значення. Приєднуйся своєю частиною зараз</p>
-                          <a href="Задонатити" class="help__link btn btn--full">Задонатити</a>
+                          <p class="help__text">Зроби донейшн та стань супергероєм для Українців!</p>
+                          <a href="#" class="help__link btn">Задонатити</a>
                       </div>
                   </div>
                   <ul class="help__list">
                       <li class="help__item">
                           <h3 class="help__name">Домопожи продукцією</h3>
-                          <p class="help__text">Ми шукаємо будівельні матеріали, меблі та техніку</p>
-                          <a href="#" class="help__link btn">Зв’язатися</a>
+                          <p class="help__text">Нам все ще потрібні матеріали та інструменти, щоб ми могли давати тепло і взимку!</p>
+                          <button class="help__link btn modal-btn">Зв’язатися</button>
                       </li>
                       <li class="help__item">
                           <h3 class="help__name">Стати волонтером</h3>
-                          <p class="help__text">Допоможи своїми руками та головою, стань волонтером в команді</p>
-                          <a href="#" class="help__link btn">Зв’язатися</a>
+                          <p class="help__text">Увійди в історію як волонтер, про якого складуть легенди в кемпі!</p>
+                          <button class="help__link btn modal-btn">Зв’язатися</button>
                       </li>
                   </ul>
               </div>
@@ -407,23 +649,129 @@
          </div>
       </div>
    </footer>
-   <!-- ./footer -->
+   <!-- modal-window -->
+   <div class="modal-window" id="modal-window">
+      <div class="container">
+         <div class="modal-window__overflow"></div>
+         <div class="modal-window__body">
+            <button type="button" class="modal-window__close">
+               <svg class="modal-window__icon" width="25" height="25">
+                  <use xlink:href="#cross"></use>
+               </svg>
+            </button>
+            <div class="modal-window__content">
+               <h2 class="modal-window__title">Твій рестарт починається зараз</h2>
+               <p class="modal-window__text">Якщо ти вже точно їдеш до нас, або тобі хочеться зв'ясувати деталі - залишай заявку, а ми тебе одразу наберемо!</p>
+            </div>
+            <form method="POST" action="" class="modal-window__form g-form" id="g-form" autocomplete="off" data-form-lang="ua">
+               <label for="modalName" class="modal-window__label">
+                  <input type="text" aria-label="Твоє ім’я" class="modal-window__input --req" id="modalName" name="Ім'я" placeholder="Твоє ім’я" autocomplete="name">
+                  <span>*</span>
+               </label>
+               <label for="modalEmail" class="modal-window__label">
+                  <input type="email" aria-label="Твоя пошта" class="modal-window__input _email --req" id="modalEmail" name="Пошта" placeholder="Твоя пошта" autocomplete="email">
+                  <span>*</span>
+               </label>
+               <label for="modalPhone" class="modal-window__label">
+                  <input type="tel" aria-label="Твій номер телефону" class="modal-window__input tel --req" id="modalPhone" name="Телефон" placeholder="Твій номер телефону" autocomplete="tel" minlength="9">
+                  <span>*</span>
+               </label>
+               <input type="text" class="modal-window__input hide" id="honeypot" name="honeypot" value="" placeholder="!!!НЕ ЗАПОВНЮВАТИ ЦЕ ПОЛЕ!!!" hidden>
+               <button type="submit" id="send-btn" class="modal-window__btn btn">Старт!</button>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- ./modal-window -->   <!-- ./footer -->
    <!-- sprites -->
    <svg style="display: none;">
-      <symbol viewBox="0 0 30 33" id="arrow-left" xmlns="http://www.w3.org/2000/svg">
+      <symbol fill="none" viewBox="0 0 30 33" id="arrow-left" xmlns="http://www.w3.org/2000/svg">
          <path d="M0 16.5h28.5m0 0L13 1m15.5 15.5L13 32" stroke="#fff" stroke-width="2" />
       </symbol>
-      <symbol viewBox="0 0 28 29" id="facebook" xmlns="http://www.w3.org/2000/svg">
+      <symbol fill="none" viewBox="0 0 24 24" id="cross" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M22.55 20.55L3.37 1.37c-.363-.363-.8-.623-1.216-.722C1.74.55 1.381.62 1.157.843c-.224.224-.294.582-.195.998.099.415.358.852.722 1.215l19.18 19.18c.363.364.8.623 1.216.722.415.1.774.029.997-.195.224-.223.294-.582.195-.997-.099-.415-.358-.852-.722-1.216z"
+            fill="#fff" />
+         <path
+            d="M20.55 1.45L1.37 20.63c-.363.363-.623.8-.722 1.216-.099.415-.029.773.195.997.224.224.582.294.998.195.415-.099.852-.358 1.215-.722l19.18-19.18c.364-.363.623-.8.722-1.216.1-.415.029-.774-.195-.997-.223-.224-.582-.294-.997-.195-.415.099-.852.358-1.216.722z"
+            fill="#fff" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 29 25" id="explanation-1" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M28.599 8.11c-.09.444-.154.896-.274 1.333a6.671 6.671 0 01-1.902 3.14c-.544.512-1.1 1.01-1.638 1.53-.146.14-.219.108-.343-.019-.567-.58-1.129-1.166-1.72-1.72-1.437-1.348-3.774-.746-4.398 1.125a3.4 3.4 0 00-.136.667c-.015.127-.061.163-.181.18-1.438.196-2.308 1.056-2.487 2.472-.022.174-.093.2-.237.214-1.176.122-2.101.92-2.369 2.061-.22.939.003 1.779.652 2.485.437.477.904.926 1.366 1.38.116.113.136.176.002.294-.356.312-.693.646-1.045.963-.783.704-1.917.72-2.688.043-.78-.684-.923-1.793-.345-2.677.033-.05.058-.105.086-.158-.057.02-.116.035-.17.06-.869.413-1.82.228-2.434-.475-.598-.685-.658-1.676-.15-2.464.033-.052.062-.107.094-.16-.065.02-.133.035-.194.064-1.262.599-2.73-.184-2.867-1.55-.058-.584.103-1.127.528-1.555 1.914-1.927 3.835-3.847 5.744-5.778.171-.173.254-.17.416.004.397.427.817.832 1.23 1.244 1.12 1.116 2.728 1.413 4.124.766a3.668 3.668 0 002.107-3.645 3.56 3.56 0 00-1.034-2.267c-.71-.722-1.421-1.44-2.14-2.151-.138-.136-.146-.208.01-.332.657-.518 1.257-1.125 1.963-1.56 4.117-2.543 9.557-.014 10.334 4.775.03.188.065.374.098.561v1.15h-.002z"
+            fill="#FF5C00" />
+         <path
+            d="M7.972 0c.366.06.737.103 1.098.185 1.233.278 2.325.845 3.225 1.736a496.964 496.964 0 014.857 4.886c.809.823.788 2.09-.012 2.878-.794.783-2.024.775-2.843-.032-.798-.787-1.583-1.588-2.373-2.382-.153-.153-.303-.156-.45-.008-2.147 2.156-4.294 4.314-6.443 6.47-.258.258-.193.257-.45 0-.67-.671-1.36-1.323-2-2.022C.747 9.708.178 7.367 1.016 4.787c.83-2.56 2.659-4.09 5.28-4.66C6.56.07 6.83.042 7.098 0h.874zM18.259 15.909c.235.123.513.201.697.377.795.762 1.568 1.548 2.338 2.335.435.446.43 1.104.013 1.525a1.063 1.063 0 01-1.52-.003 161.567 161.567 0 01-2.35-2.36 1.037 1.037 0 01-.193-1.193c.179-.383.563-.624.982-.618l.032-.063zM18.943 22.15c-.014.36-.206.696-.603.884a1.02 1.02 0 01-1.127-.122c-.1-.077-.188-.171-.278-.261-.7-.703-1.402-1.405-2.1-2.11-.469-.476-.49-1.121-.058-1.563.438-.448 1.097-.43 1.576.047.742.739 1.478 1.484 2.219 2.223.229.229.372.491.371.903zM23.27 17.779c-.343-.002-.6-.105-.809-.314-.778-.779-1.56-1.555-2.33-2.343-.434-.445-.423-1.1.002-1.522.419-.416 1.078-.42 1.518.014.778.766 1.548 1.541 2.313 2.32.34.346.419.798.228 1.21-.19.412-.522.615-.922.634z"
+            fill="#fff" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 28 22" id="explanation-2" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1.781 1.698c2.32-2.264 6.08-2.264 8.4 0l12 11.71-8.4 8.198-12-11.71a5.698 5.698 0 010-8.198z"
+            fill="#FF5C00" />
+         <path d="M25.84 1.723c-2.32-2.264-6.08-2.264-8.4 0l-12 11.71 8.4 8.198 12-11.71a5.698 5.698 0 000-8.198z"
+            fill="#fff" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 23 23" id="explanation-3" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M0 16.489c.034-.113.065-.227.102-.339.253-.749.797-1.19 1.53-1.417.06-.02.162.038.223.087 1.346 1.1 3.27 1.174 4.655.128.297-.224.513-.228.807-.072.31.165.59.332.697.706.041.148.015.185-.107.242-1.034.484-1.693 1.28-1.949 2.394a3.84 3.84 0 00-.081.822c-.009 1.07-.01 2.139 0 3.208.004.25.062.501.095.752H.494A.997.997 0 010 22.506v-6.018.001zM17.019 23c.033-.34.09-.68.095-1.021.013-.965.007-1.93.003-2.895-.006-1.517-.689-2.611-2.057-3.27-.108-.053-.124-.092-.09-.215.16-.566.652-.696 1.108-.873.046-.018.134.034.186.075.75.608 1.604.911 2.572.881a3.668 3.668 0 002.268-.847c.144-.119.251-.119.414-.055.805.312 1.31.868 1.452 1.73.023.139.023.283.023.424.001 1.729-.008 3.457.007 5.185.003.412-.122.708-.502.881H17.02z"
+            fill="#fff" />
+         <path
+            d="M7.723 23c-.38-.157-.52-.44-.512-.849a81.165 81.165 0 000-3.051c-.018-.904.42-1.81 1.605-2.196.064-.02.172.016.23.062.792.639 1.691.936 2.708.873a3.642 3.642 0 002.133-.838c.144-.118.253-.121.417-.057.768.298 1.272.822 1.434 1.642.034.167.035.342.036.514.003 1.017-.01 2.035.007 3.051.007.41-.135.692-.513.849H7.723z"
+            fill="#FF5C00" />
+         <path
+            d="M18.696 14.341a2.473 2.473 0 01-2.468-2.472c-.005-1.367 1.109-2.475 2.489-2.476a2.48 2.48 0 012.47 2.473 2.477 2.477 0 01-2.49 2.475zM6.751 11.884A2.464 2.464 0 014.27 14.34a2.476 2.476 0 01-2.471-2.493 2.476 2.476 0 012.487-2.455 2.463 2.463 0 012.465 2.493z"
+            fill="#fff" />
+         <path
+            d="M11.487 16.503a2.46 2.46 0 01-2.468-2.49 2.475 2.475 0 012.479-2.461 2.477 2.477 0 012.47 2.495 2.465 2.465 0 01-2.481 2.456zM3.508 1.413c-.004.462-.465.804-.89.619a19.904 19.904 0 01-1.584-.786C.728 1.08.64.691.792.384c.152-.306.52-.47.834-.326.536.244 1.061.513 1.581.79.21.112.302.323.301.565zM21.547.01c.34-.001.6.188.689.468.092.29-.001.617-.271.762-.518.28-1.046.546-1.581.79-.314.144-.685-.022-.835-.326-.15-.305-.057-.7.246-.864.511-.277 1.037-.527 1.56-.783.071-.035.157-.039.192-.047zM20.216 5.062c.055.017.174.04.28.09.455.222.91.448 1.36.68.384.199.518.589.334.938-.179.339-.566.449-.946.262-.468-.23-.937-.46-1.4-.7a.67.67 0 01-.341-.78c.078-.284.35-.49.713-.49zM3.508 5.83c0 .164-.118.375-.355.498a44.6 44.6 0 01-1.461.73.667.667 0 01-.899-.303.663.663 0 01.297-.9c.482-.251.968-.498 1.462-.728.454-.212.95.107.957.703z"
+            fill="#FF5C00" />
+         <path
+            d="M16.184 3.18a2.224 2.224 0 01-.67 1.533c-1.196 1.198-2.392 2.397-3.59 3.595-.279.28-.559.28-.836.003-1.201-1.202-2.403-2.402-3.6-3.608-.676-.68-.856-1.645-.48-2.503A2.23 2.23 0 019.174.862a2.155 2.155 0 011.445.627c.247.24.486.485.73.728.103.104.206.106.306.005.234-.234.464-.474.704-.703.646-.617 1.409-.819 2.26-.552.845.266 1.349.866 1.53 1.734.02.094.026.192.034.29.005.062 0 .125 0 .188z"
+            fill="#fff" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 28 29" id="facebook" xmlns="http://www.w3.org/2000/svg">
          <path
             d="M25.846.222H2.154C.964.222 0 1.186 0 2.376v23.692c0 1.19.964 2.154 2.154 2.154h23.692A2.155 2.155 0 0028 26.068V2.376c0-1.19-.965-2.154-2.154-2.154zm-3.23 8.616h-2.154c-1.077 0-1.077 1.076-1.077 1.076v2.154h3.23l-1.076 4.308h-2.154v9.692h-4.308v-9.692h-2.154v-4.308h2.154v-3.23c0-3.231 2.154-4.308 3.23-4.308h4.308v4.308z"
             fill="#000" />
       </symbol>
-      <symbol viewBox="0 0 26 26" id="instagram" xmlns="http://www.w3.org/2000/svg">
+      <symbol fill="none" viewBox="0 0 32 28" id="heart-icon" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M2.895 2.962a6.316 6.316 0 019.151 0L25.12 16.497l-9.151 9.474L2.895 12.436C.368 9.82.368 5.578 2.895 2.962z"
+            stroke="#fff" stroke-width="2" />
+         <path
+            d="M29.105 2.991a6.316 6.316 0 00-9.151 0L6.88 16.526 16.032 26l13.073-13.534c2.527-2.617 2.527-6.858 0-9.475z"
+            stroke="#fff" stroke-width="2" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 26 26" id="instagram" xmlns="http://www.w3.org/2000/svg">
          <path fill-rule="evenodd" clip-rule="evenodd"
             d="M25.737 7.481A6.778 6.778 0 0018.963.707H7.48A6.778 6.778 0 00.707 7.481v11.482a6.778 6.778 0 006.774 6.774h11.482a6.778 6.778 0 006.774-6.774V7.48zm-2.067 0v11.482a4.71 4.71 0 01-4.707 4.707H7.48a4.71 4.71 0 01-4.707-4.707V7.48A4.71 4.71 0 017.48 2.774h11.482A4.71 4.71 0 0123.67 7.48zm-4.834 4.866a5.636 5.636 0 00-5.564-4.8c-3.087 0-5.626 2.54-5.626 5.625 0 3.087 2.54 5.626 5.625 5.626 3.087 0 5.626-2.54 5.626-5.625 0-.277-.02-.553-.06-.826zm-2.043.303a3.576 3.576 0 01-3.521 4.082 3.577 3.577 0 01-3.56-3.56 3.576 3.576 0 014.082-3.52 3.569 3.569 0 012.999 2.998zm2.744-6.776a1.033 1.033 0 110 2.067 1.033 1.033 0 010-2.067z"
             fill="#000" />
       </symbol>
-      <symbol viewBox="0 0 33 25" id="youtube" xmlns="http://www.w3.org/2000/svg">
+      <symbol fill="none" viewBox="0 0 318 15" id="left-long-arr" xmlns="http://www.w3.org/2000/svg">
+         <path opacity=".4"
+            d="M372 8.571a1 1 0 000-2v2zM.51 6.865a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L2.631 7.572l5.657-5.657A1 1 0 106.874.501L.51 6.865zM372 6.57H1.217v2H372v-2z"
+            fill="#fff" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 296 122" id="pointing-arrow" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M175 1.5l.707-.707-.293-.293H175v1zm119.501 120.501a1 1 0 001-1v-9a1 1 0 00-2 0v8h-8a1 1 0 000 2h9zM174.293 2.207l119.501 119.501 1.414-1.414L175.707.793l-1.414 1.414zM175 .5H0v2h175v-2z"
+            fill="#000" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 138 24" id="restart" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M91.141 14.985l-4.888.376c-1.401.114-1.629 1.169-1.629 2.037v.98c0 1.659.909 1.847 1.894 1.847 2.198 0 4.623-1.585 4.623-1.585v-3.657.002zM87.77 23.996h4.356l-.985-1.96c-.155.282-1.533 1.343-3.371 1.96zM67.577 17.06V8.2h-3.26V5.257l3.26-1.094.65-4.164H34.564l7.932 12-7.914 11.973-.018.027h14.909c-1.211-.16-2.165-.38-2.627-.678V20.04h9.512c.342 0 1.327-.038 1.327-1.282v-.943c0-.83-.228-1.282-1.327-1.282H51.66c-3.561 0-5.645-1.509-5.645-5.392V9.408c0-3.091 1.326-5.392 5.23-5.392 3.902 0 9.207.114 10.76 1.019V8.35h-9.132c-1.364 0-1.554.453-1.554 1.395v.904c0 1.244.683 1.282 1.554 1.282h4.775c3.826 0 5.343 2.263 5.343 5.204v2.037c0 2.784-1.149 4.202-2.643 4.825h10.534c-2.032-.634-3.305-2.666-3.305-6.938z"
+            fill="#fff" />
+         <path
+            d="M117.83 17.06V8.2h-3.259V5.257l3.259-1.094.65-4.164H72.881v4.164h4.51V8.2h-4.51v8.03c0 2.941.683 3.582 1.706 3.96 0 0 2.274.792 2.54.792v3.017h5.504c-2.243-.873-3.313-2.867-3.313-4.864V17.25c0-2.94 1.591-5.506 5.91-5.506 0 0 5.911.038 5.911 0 0 0 .037-1.244 0-1.282 0-2.149-1.022-2.45-2.69-2.45-1.782 0-6.822.301-8.45.413v-3.28c2.653-1.019 5.418-1.321 9.17-1.321 4.319 0 7.274 1.47 7.274 6.448v13.724h3.13V4.202h4.472l.834 2.527c1.364-1.356 3.259-2.715 5.759-2.715.872 0 1.706 0 2.236.226v5.09a43.769 43.769 0 00-2.919-.115c-2.197 0-3.789.377-5.078 2.225v12.556h16.254c-2.032-.634-3.305-2.666-3.305-6.938l.004.002zM129.347 0h-6.213v4.164h4.51V8.2h-4.51v8.03c0 2.941.683 3.582 1.706 3.96 0 0 2.274.792 2.539.792v3.017h1.968L138 12l-8.653-12zM14.839 13.713c.69-.41 1.204-.866 1.544-1.364.455-.69.683-1.562.683-2.618 0-2.024-.516-3.463-1.544-4.312-.853-.704-2.153-1.056-3.904-1.056H0v15.27h3.659v-4.532h7.1c1.03 0 1.772.176 2.227.529.456.338.683.88.683 1.629v2.376h3.66v-3.169c0-.763-.228-1.365-.684-1.804-.368-.353-.97-.668-1.808-.947l.002-.002zm-1.896-2.178c-.308.353-.853.528-1.63.528H3.658V7.4h7.651c.795 0 1.351.19 1.676.572.28.338.418.923.418 1.76s-.155 1.451-.463 1.804h.002zM23.498 16.751v-3.498h5.122V10.59h-5.122V7.244H34.55l-1.9-2.881H19.636v15.27h13.026l1.902-2.882H23.498z"
+            fill="#fff" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 17 15" id="small-arrow-right" xmlns="http://www.w3.org/2000/svg">
+         <path d="M0 7.5h15m0 0L8.108 1M15 7.5L8.108 14" stroke="#fff" stroke-width="2" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 60 60" id="tripo" xmlns="http://www.w3.org/2000/svg">
+         <circle cx="15" cy="45" r="15" fill="#FF5C00" />
+         <circle cx="45" cy="45" r="15" fill="#00F" />
+         <circle cx="15" cy="15" r="15" fill="#00F" />
+      </symbol>
+      <symbol fill="none" viewBox="0 0 33 25" id="youtube" xmlns="http://www.w3.org/2000/svg">
          <path
             d="M27.408.683C24.488.396 20.254.055 16.667.055c-3.588 0-7.821.341-10.74.628A6.052 6.052 0 00.444 6.735v10.974a6.052 6.052 0 005.48 6.052c2.922.287 7.155.628 10.743.628 3.587 0 7.82-.34 10.74-.628a6.052 6.052 0 005.482-6.052V6.735a6.052 6.052 0 00-5.48-6.052zM12.611 18.305V6.14l10.139 6.08-10.139 6.086z"
             fill="#000" />
