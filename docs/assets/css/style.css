@@ -2213,7 +2213,7 @@ button.swiper-pagination-bullet {
    display: flex;
    -ms-flex-wrap: wrap;
    flex-wrap: wrap;
-   gap: 30px;
+   gap: 5rem;
 }
 
 .explanation__box {
@@ -2253,8 +2253,10 @@ button.swiper-pagination-bullet {
    display: flex;
    -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -ms-flex-pack: center;
+   justify-content: center;
    gap: 3rem 0;
-   min-height: 80vh;
+   width: 100%;
 }
 
 .explanation__item {
@@ -2334,7 +2336,7 @@ button.swiper-pagination-bullet {
 .location::before {
    content: "";
    position: absolute;
-   top: 0;
+   top: 20px;
    left: 50%;
    background: url("../images/svg/sprite/heart-icon.svg") no-repeat center/cover;
    width: 4rem;
@@ -2362,12 +2364,14 @@ button.swiper-pagination-bullet {
    -ms-flex-direction: column;
    flex-direction: column;
    gap: 3.5rem;
+   width: 100%;
 }
 
 .location__text {
    font-size: var(--fz-24);
    font-weight: var(--fw-300);
    max-width: 98.2rem;
+   margin-inline: auto;
 }
 
 .location__link {
@@ -2924,6 +2928,11 @@ button.swiper-pagination-bullet {
 
    .header .nav__link {
       transition-duration: 0.25s;
+      color: var(--white);
+   }
+
+   .header .nav__link::after {
+      background-color: var(--white);
    }
 
    .header__btn {
@@ -2936,34 +2945,39 @@ button.swiper-pagination-bullet {
       letter-spacing: 5px;
    }
 
-   .about__inner {
+   .about__inner,
+  .about__list {
       -ms-flex-pack: center;
       justify-content: center;
    }
 
-   .about__title {
+   .about__title,
+  .about__text {
       text-align: center;
    }
 
-   .about__btn {
+   .about__title span::after {
+      width: 18rem;
+   }
+
+   .about__btn,
+  .about__block img {
       margin-inline: auto;
    }
 
-   .about__block img {
-      margin-inline: auto;
-   }
-
-   .about__list {
-      -ms-flex-pack: center;
-      justify-content: center;
-   }
-
-   .about__text {
-      text-align: center;
+   .explanation__item {
+      padding: 0 2rem;
    }
 
    .help__inner {
       gap: 4rem;
+   }
+
+   .help__wrapp {
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-align: center;
+      align-items: center;
    }
 
    .help__wrapp,
@@ -3014,6 +3028,14 @@ button.swiper-pagination-bullet {
    section {
       background: url("../images/main/bg-img.jpg") no-repeat center/cover;
    }
+
+   .about__title span::after {
+      width: 17rem;
+   }
+
+   .explanation__item:not(:first-child) {
+      border-right: 2px solid rgba(62, 63, 249, 0.1);
+   }
 }
 
 @media (max-width: 767.98px) {
@@ -3032,6 +3054,33 @@ button.swiper-pagination-bullet {
       --fz-60: 5rem;
       --fz-70: 5rem;
       --fz-80: 5.8rem;
+   }
+
+   .about__title span::after {
+      width: 15rem;
+   }
+}
+
+@media (max-width: 667.98px) {
+   .explanation__list {
+      -ms-flex-pack: center;
+      justify-content: center;
+   }
+
+   .explanation__item {
+      border-inline: 2px solid rgba(62, 63, 249, 0.1);
+   }
+
+   .explanation__wrapp span {
+      text-align: center;
+   }
+
+   .explanation__text {
+      text-align: center;
+   }
+
+   .explanation__icon {
+      margin-inline: auto;
    }
 }
 
@@ -3056,12 +3105,20 @@ button.swiper-pagination-bullet {
    .beginning__heading {
       -ms-flex-direction: column;
       flex-direction: column;
+      margin-bottom: 6rem;
    }
 
    .beginning__title {
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      text-align: left;
+      text-align: center;
+      max-width: 100%;
+   }
+
+   .beginning__text {
+      max-width: 100%;
+   }
+
+   .about__title span::after {
+      width: 14rem;
    }
 
    .footer .social__list {

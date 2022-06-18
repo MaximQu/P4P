@@ -1599,34 +1599,44 @@ button.swiper-pagination-bullet {
   color: var(--white);
 }
 .hero__subtext {
-  position: absolute;
-  margin-inline: auto;
-  bottom: -0.5rem;
-  opacity: 0.4;
   display: flex;
-  gap: 9.5rem;
-  width: max-content;
+  align-items: center;
+  text-align: center;
+  gap: 135px;
+  left: 0;
+  right: 0;
+  color: var(--white);
   font-size: var(--fz-18);
   font-weight: var(--fw-400);
-  color: var(--white);
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 10px;
+  opacity: 0.2;
 }
-.hero__subtext::before, .hero__subtext::after {
-  content: url("../images/svg/sprite/left-long-arr.svg");
+.hero__subtext--line {
+  position: relative;
+  flex: 1 1;
+  height: 15px;
 }
-.hero__subtext::before {
+.hero__subtext--line:last-of-type {
   transform: rotate(180deg);
 }
-
-@media (max-width: 1199.98px) {
-  .hero__subtext {
-    max-width: 29rem;
-    width: 100%;
-    letter-spacing: 5px;
-  }
+.hero__subtext--line svg {
+  position: absolute;
+  fill: var(--white);
+  right: -52px;
 }
+.hero__subtext--line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -50px;
+  margin-block: auto;
+  background-color: var(--white);
+  height: 2px;
+}
+
 .beginning {
   position: relative;
 }
@@ -1887,6 +1897,11 @@ button.swiper-pagination-bullet {
   margin: 0 !important;
 }
 
+@media (max-width: 767.98px) {
+  .slider-minor {
+    display: none;
+  }
+}
 .about {
   position: relative;
 }
@@ -2086,13 +2101,30 @@ button.swiper-pagination-bullet {
   max-width: 60rem;
   margin-inline: auto;
 }
+.inclusion-descr__title--scond {
+  border-bottom: none;
+}
+.inclusion-descr__title span {
+  padding-bottom: 3px;
+  width: fit-content;
+  margin-inline: auto;
+  border-bottom: 2px solid rgba(0, 0, 255, 0.1);
+}
 .inclusion-descr__list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
   gap: 2rem;
   list-style: disc;
   max-width: 64rem;
 }
+.inclusion-descr__item {
+  display: list-item;
+}
+.inclusion-descr__item::marker {
+  color: var(--clr-blue-0);
+}
+
 .explanation-heading {
   display: flex;
   flex-direction: column;
