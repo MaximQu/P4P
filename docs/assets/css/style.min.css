@@ -1357,7 +1357,7 @@ button.swiper-pagination-bullet {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--i-top);
+  z-index: var(--i-high);
   width: 100%;
   margin: auto;
 }
@@ -1605,6 +1605,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 4rem;
 }
 .hero__btn {
   padding: 1.8rem 2.5rem;
@@ -1614,7 +1615,10 @@ button.swiper-pagination-bullet {
   bottom: 170px;
   margin-inline: auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 5rem;
+  margin-bottom: 3rem;
 }
 .hero-suggestions__item {
   display: flex;
@@ -1641,6 +1645,7 @@ button.swiper-pagination-bullet {
 .hero-suggestions__icon {
   width: 34px;
   height: 34px;
+  margin-bottom: 1rem;
 }
 .hero__subtext {
   display: flex;
@@ -1681,14 +1686,34 @@ button.swiper-pagination-bullet {
   height: 2px;
 }
 
+@media (max-width: 767.98px) {
+  .hero__subtext {
+    letter-spacing: 3px;
+    gap: 9rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero__subtext {
+    letter-spacing: 2px;
+    gap: 6rem;
+  }
+}
+@media (max-width: 480.98px) {
+  .hero__subtext {
+    letter-spacing: 1px;
+  }
+}
 .navigation__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 .navigation__item {
   text-align: center;
   max-width: 27rem;
   padding: 0 4rem;
+  box-sizing: content-box;
   position: relative;
 }
 .navigation__item span {
@@ -1696,6 +1721,7 @@ button.swiper-pagination-bullet {
   color: var(--clr-black-0);
   margin-bottom: 4rem;
   max-width: 19rem;
+  margin-inline: auto;
 }
 .navigation__item:not(:last-child)::after {
   content: "";
@@ -1706,9 +1732,23 @@ button.swiper-pagination-bullet {
   height: 75px;
   background-color: var(--clr-blue-0);
 }
+.navigation__item.share .navigation__link {
+  color: var(--clr-blue-0);
+  border-color: var(--clr-blue-0);
+}
 .navigation__link {
   margin-inline: auto;
   color: var(--clr-orange-0);
+  padding: 18px 34px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  line-height: 1.3em;
+}
+.navigation__link svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--clr-blue-0);
 }
 .navigation__link:hover {
   color: var(--white);
@@ -1842,7 +1882,6 @@ button.swiper-pagination-bullet {
   transition: 0.1s linear;
 }
 .slider__info .slider__wrapp {
-  opacity: 0;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1870,6 +1909,11 @@ button.swiper-pagination-bullet {
   transition: 0.1s linear;
 }
 
+@media (hover: hover) {
+  .slider__info .slider__wrapp {
+    opacity: 0;
+  }
+}
 .slider {
   min-height: 450px;
   position: relative;
@@ -1898,6 +1942,12 @@ button.swiper-pagination-bullet {
   object-fit: cover;
   object-position: center top;
 }
+.slider-main .swiper-button-prev {
+  left: 20px;
+}
+.slider-main .swiper-button-next {
+  right: 20px;
+}
 .slider-minor {
   overflow: hidden;
 }
@@ -1921,6 +1971,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   inset: 0;
   border: 5px solid blue;
+  border-radius: 20px;
 }
 .slider-minor__img {
   object-fit: cover;
@@ -1974,9 +2025,23 @@ button.swiper-pagination-bullet {
   margin: 0 !important;
 }
 
+@media (max-width: 991.98px) {
+  .slider-main__item {
+    height: 46rem;
+  }
+}
 @media (max-width: 767.98px) {
   .slider-minor {
     display: none;
+  }
+
+  .slider-main__item {
+    height: 36rem;
+  }
+}
+@media (max-width: 480.98px) {
+  .slider-main__item {
+    height: 38rem;
   }
 }
 .about {
@@ -2103,15 +2168,34 @@ button.swiper-pagination-bullet {
   .about__title span::after {
     width: 17rem;
   }
+  .about__item {
+    padding-bottom: 6rem;
+  }
 }
 @media (max-width: 767.98px) {
   .about__title span::after {
     width: 15rem;
   }
+  .about__item {
+    padding-bottom: 5rem;
+  }
 }
 @media (max-width: 575.98px) {
   .about__title span::after {
     width: 14rem;
+  }
+  .about__item {
+    padding-bottom: 4rem;
+  }
+}
+@media (max-width: 480.98px) {
+  .about__item {
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 375.98px) {
+  .about__item {
+    padding-bottom: 2rem;
   }
 }
 .inclusion__title {
@@ -2123,6 +2207,7 @@ button.swiper-pagination-bullet {
 .inclusion__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 3.5rem;
   margin-bottom: 4rem;
   max-width: 64rem;
@@ -2192,7 +2277,7 @@ button.swiper-pagination-bullet {
 }
 .inclusion-descr__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
   justify-content: center;
   margin-inline: auto;
   flex-wrap: wrap;
@@ -2201,11 +2286,22 @@ button.swiper-pagination-bullet {
 }
 .inclusion-descr__item {
   display: list-item;
+  line-height: 1.3em;
+  margin-left: 5px;
 }
 .inclusion-descr__item::marker {
   color: var(--clr-blue-0);
 }
 
+@media (max-width: 767.98px) {
+  .inclusion__title {
+    text-align: center;
+    margin-inline: auto;
+  }
+  .inclusion__item {
+    max-width: 39rem;
+  }
+}
 .explanation-heading {
   display: flex;
   flex-direction: column;
@@ -2340,6 +2436,21 @@ button.swiper-pagination-bullet {
     text-align: center;
   }
   .explanation__icon {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .explanation-heading {
+    align-items: center;
+    text-align: center;
+  }
+  .explanation-heading__title {
+    max-width: 55rem;
+  }
+  .explanation-heading__text {
+    max-width: 100%;
+  }
+  .explanation-heading__link {
     margin-inline: auto;
   }
 }
@@ -2634,7 +2745,7 @@ button.swiper-pagination-bullet {
 .modal-window {
   position: fixed;
   inset: 0;
-  z-index: 100000;
+  z-index: var(--i-top);
   min-height: 100vh;
   width: 100%;
   display: none;
@@ -2663,7 +2774,6 @@ button.swiper-pagination-bullet {
 }
 .modal-window__close {
   margin-left: auto;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 .modal-window__icon {
@@ -2694,7 +2804,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding: 8rem 8rem;
+  padding: 8rem;
   border: 1px solid var(--white);
   border-radius: 40px;
   margin-inline: auto;
@@ -2736,4 +2846,20 @@ button.swiper-pagination-bullet {
   background-color: var(--clr-orange-0);
   max-width: 140px;
   width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .modal-window__form {
+    padding: 6rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .modal-window__form {
+    padding: 5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-window__form {
+    padding: 4rem;
+  }
 }
