@@ -36,7 +36,7 @@
    <meta property="og:image:alt" content="People for people">
    <meta property="og:description" content="People for people"/>
    <!-- Title -->
-   <title>Дякуємо</title>
+   <title>Донати</title>
    <!-- scripts -->
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
    <script src="assets/js/main.js" type="module"></script>
@@ -44,70 +44,216 @@
 </head>
 <body>
    <!-- header -->
-   <header class="header header--page">
+   <header class="header">
       <div class="container">
          <div class="header__inner">
             <div class="header__block">
                <a href="index.html" class="logo__link">
-                  <img src="assets/images/svg/logo.svg" alt="People for people" width="54" height="64" class="logo__img">
+                  <!-- <img src="assets/images/svg/logo.svg" alt="People for people" width="54" height="64" class="logo__img"> -->
+                  <svg class="logo__icon" width="69" height="81">
+                     <use xlink:href="#logo"></use>
+                  </svg>
                </a>
-               <svg class="header__icon">
+               <svg class="header__icon" width="138" height="24">
                   <use xlink:href="#restart"></use>
                </svg>
             </div>
+            <nav class="nav">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#" class="nav__link underline" id="#explanation">Як це працює?</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link underline" id="#about">Вигляд кемпу</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link underline" id="#stream">Програма кемпу</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link underline" id="#stream">Контакти</a>
+                  </li>
+                  <li class="nav__item">
+                     <button class="nav__link underline modal-btn">Хочу до кемпу</button>
+                  </li>
+               </ul>
+            </nav>
+            <div class="burger__menu">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div class="header__wrapp">
+               <ul class="lang__list">
+                  <li class="lang__item">
+                     <a href="#" class="lang__link">ENG</a>
+                  </li>
+                  <li class="lang__item active">
+                     <a href="#" class="lang__link">UA</a>
+                  </li>
+               </ul>
+               <button class="header__btn btn modal-btn">Хочу до кемпу</button>
+            </div>
          </div>
       </div>
-   </header>   <!-- ./header -->
+   </header>
+   <!-- ./header -->
    <!-- main -->
    <main class="main">
-      <!-- answer -->
-      <section class="answer">
+      <!-- hero -->
+      <section class="hero">
           <div class="container">
-              <div class="answer__inner">
-                  <h2 class="answer__title">Дякуємо за рестарт!
-                      <svg>
-                          <use xlink:href="#heart-icon"></use>
-                      </svg>
-                  </h2>
-                  <p class="answer__text">Ми отримали твою заявку і накнайшвидше з тобою зв’яжемось!</p>
-                  <a href="index.html" class="answer__link btn">Повернутися до сайту</a>
+              <div class="hero__inner">
+                  <h1 class="hero__title hero__title--page">Підтримай «Рестарт»!</h1>
+                  <span class="hero__subtitle">Кожна гривня наближає нас до відновлення країни, економіки та людей!</span>
+                  <ul class="hero-suggestions__list">
+                      <li class="hero-suggestions__item">
+                          <svg class="hero-suggestions__icon" width="34" height="34">
+                              <use xlink:href="#card"></use>
+                          </svg>
+                          <span>Card</span>
+                      </li>
+                      <li class="hero-suggestions__item">
+                          <svg class="hero-suggestions__icon" width="34" height="34">
+                              <use xlink:href="#crypto"></use>
+                          </svg>
+                          <span>Crypto</span>
+                      </li>
+                      <li class="hero-suggestions__item">
+                          <svg class="hero-suggestions__icon" width="34" height="34">
+                              <use xlink:href="#bank-trans"></use>
+                          </svg>
+                          <span>Bank transfer</span>
+                      </li>
+                      <li class="hero-suggestions__item">
+                          <svg class="hero-suggestions__icon" width="34" height="34">
+                              <use xlink:href="#paypal"></use>
+                          </svg>
+                          <span>Paypal</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="hero__subtext">
+              <div class="hero__subtext--line">
+                  <svg width="10" height="15">
+                      <use xlink:href="#arrow-vector"></use>
+                  </svg>
+              </div>
+              <span>Допомагаємо і заряджаємо енергією</span>
+              <div class="hero__subtext--line">
+                  <svg width="10" height="15">
+                      <use xlink:href="#arrow-vector"></use>
+                  </svg>
               </div>
           </div>
       </section>
-      <!-- ./answer -->
+      <!-- ./hero -->
+      <!-- navigation -->
+      <section class="navigation">
+          <div class="container">
+              <ul class="navigation__list">
+                  <li class="navigation__item">
+                      <span>Більше про наш проект</span>
+                      <a href="#" class="navigation__link btn">На сайт</a>
+                  </li>
+                  <li class="navigation__item">
+                      <span>Допоможи продукцією</span>
+                      <button class="navigation__link btn">Зв’язатися</button>
+                  </li>
+                  <li class="navigation__item">
+                      <span>Підтримай інформаціно</span>
+                      <a href="#" class="navigation__link btn">
+                          Поширити в
+                          <svg width="10" height="15">
+                              <use xlink:href="#instagram"></use>
+                          </svg>
+                      </a>
+                  </li>
+                  <li class="navigation__item">
+                      <span>Доєднуйся до команди</span>
+                      <a href="#" class="navigation__link btn">Доєднатися</a>
+                  </li>
+              </ul>
+          </div>
+      </section>
+      <!-- ./navigation -->
    </main>
    <!-- ./main -->
    <!-- footer -->
-   <footer class="footer footer--page">
+   <footer class="footer">
       <div class="container">
-         <div class="footer__wrapp">
-            <span class="footer__text">Зв’язатися з нами</span>
-            <ul class="social__list">
-               <li class="social__item">
-                  <a href="#" target="_blank" rel="noopener noreferrer" class="social__link" title="Facebook">
-                     <svg width="30" height="30">
-                        <use xlink:href="#facebook"></use>
-                     </svg>
-                  </a>
-               </li>
-               <li class="social__item">
-                  <a href="#" target="_blank" rel="noopener noreferrer" class="social__link" title="Instagram">
-                     <svg width="30" height="30">
-                        <use xlink:href="#instagram"></use>
-                     </svg>
-                  </a>
-               </li>
-               <li class="social__item">
-                  <a href="#" target="_blank" rel="noopener noreferrer" class="social__link" title="Youtube">
-                     <svg width="35" height="30">
-                        <use xlink:href="#youtube"></use>
-                     </svg>
-                  </a>
-               </li>
-            </ul>
+         <div class="footer__inner">
+            <div class="footer__wrapp">
+               <a href="#" class="footer__link">Privacy Policy</a>
+               <a href="#" class="footer__link">Terms & Conditions</a>
+            </div>
+            <div class="footer__wrapp">
+               <span class="footer__text">Зв’язатися з нами</span>
+               <ul class="social__list">
+                  <li class="social__item">
+                     <a href="#" target="_blank" rel="noopener noreferrer" class="social__link" title="Facebook">
+                        <svg width="30" height="30">
+                           <use xlink:href="#facebook"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social__item">
+                     <a href="#" target="_blank" rel="noopener noreferrer" class="social__link" title="Instagram">
+                        <svg width="30" height="30">
+                           <use xlink:href="#instagram"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="social__item">
+                     <a href="#" target="_blank" rel="noopener noreferrer" class="social__link" title="Youtube">
+                        <svg width="35" height="30">
+                           <use xlink:href="#youtube"></use>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+               <span class="footer__text">Copyright 2022</span>
+               <a href="#" target="_blank" rel="noopener noreferrer">Dev by MaximQu</a>
+            </div>
          </div>
       </div>
-   </footer>   <!-- ./footer -->
+   </footer>
+   <!-- modal-window -->
+   <div class="modal-window" id="modal-window">
+      <div class="container">
+         <div class="modal-window__overflow"></div>
+         <div class="modal-window__body">
+            <button type="button" class="modal-window__close">
+               <svg class="modal-window__icon" width="25" height="25">
+                  <use xlink:href="#cross"></use>
+               </svg>
+            </button>
+            <div class="modal-window__content">
+               <h2 class="modal-window__title">Твій рестарт починається зараз</h2>
+               <p class="modal-window__text">Якщо ти вже точно їдеш до нас, або тобі хочеться зв'ясувати деталі - залишай заявку, а ми тебе одразу наберемо!</p>
+            </div>
+            <form method="POST" action="#" class="modal-window__form g-form" id="g-form" autocomplete="off" data-form-lang="ua">
+               <label for="modalName" class="modal-window__label">
+                  <input type="text" aria-label="Твоє ім’я" class="modal-window__input --req" id="modalName" name="Ім'я" placeholder="Твоє ім’я" autocomplete="name">
+                  <span>*</span>
+               </label>
+               <label for="modalEmail" class="modal-window__label">
+                  <input type="email" aria-label="Твоя пошта" class="modal-window__input _email --req" id="modalEmail" name="Пошта" placeholder="Твоя пошта" autocomplete="email">
+                  <span>*</span>
+               </label>
+               <label for="modalPhone" class="modal-window__label">
+                  <input type="tel" aria-label="Твій номер телефону" class="modal-window__input tel --req" id="modalPhone" name="Телефон" placeholder="Твій номер телефону" autocomplete="tel" minlength="9">
+                  <span>*</span>
+               </label>
+               <textarea class="modal-window__input" id="modalMessage" name="Коментар" placeholder="Коментар"></textarea>
+               <input type="checkbox" name="Дозвіл" id="modalCheckbox">
+               <input type="text" class="modal-window__input hide" id="honeypot" name="honeypot" value="" placeholder="!!!НЕ ЗАПОВНЮВАТИ ЦЕ ПОЛЕ!!!" hidden>
+               <button type="submit" id="send-btn" class="modal-window__btn btn">Старт!</button>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- ./modal-window -->   <!-- ./footer -->
    <!-- sprites -->
    <svg style="display: none;">
       <symbol viewBox="0 0 30 33" id="arrow-left" xmlns="http://www.w3.org/2000/svg">

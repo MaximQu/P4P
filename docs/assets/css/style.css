@@ -1616,6 +1616,42 @@ button.swiper-pagination-bullet {
    color: var(--white);
 }
 
+.hero-suggestions__list {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-inline: auto;
+   display: -ms-flexbox;
+   display: flex;
+   gap: 5rem;
+}
+
+.hero-suggestions__item {
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -ms-flex-align: center;
+   align-items: center;
+   text-align: center;
+   width: 20rem;
+   height: 20rem;
+   background-color: var(--clr-orange-0);
+   border-radius: 30px;
+   transition: 0.2s linear;
+}
+
+.hero-suggestions__item:hover {
+   background-color: var(--clr-blue-0);
+}
+
+.hero-suggestions span {
+   font-size: var(--fz-24);
+   font-weight: vaar(--fw-400);
+   color: var(--white);
+}
+
 .hero__subtext {
    display: -ms-flexbox;
    display: flex;
