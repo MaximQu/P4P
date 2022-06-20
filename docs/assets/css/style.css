@@ -1636,7 +1636,12 @@ button.swiper-pagination-bullet {
    margin-inline: auto;
    display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -ms-flex-pack: center;
+   justify-content: center;
    gap: 5rem;
+   margin-bottom: 3rem;
 }
 
 .hero-suggestions__item {
@@ -1671,6 +1676,7 @@ button.swiper-pagination-bullet {
 .hero-suggestions__icon {
    width: 34px;
    height: 34px;
+   margin-bottom: 1rem;
 }
 
 .hero__subtext {
@@ -1725,12 +1731,16 @@ button.swiper-pagination-bullet {
    display: flex;
    -ms-flex-pack: center;
    justify-content: center;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   gap: 3rem;
 }
 
 .navigation__item {
    text-align: center;
    max-width: 27rem;
    padding: 0 4rem;
+   box-sizing: content-box;
    position: relative;
 }
 
@@ -1739,6 +1749,7 @@ button.swiper-pagination-bullet {
    color: var(--clr-black-0);
    margin-bottom: 4rem;
    max-width: 19rem;
+   margin-inline: auto;
 }
 
 .navigation__item:not(:last-child)::after {
@@ -1751,9 +1762,27 @@ button.swiper-pagination-bullet {
    background-color: var(--clr-blue-0);
 }
 
+.navigation__item.share .navigation__link {
+   color: var(--clr-blue-0);
+   border-color: var(--clr-blue-0);
+}
+
 .navigation__link {
    margin-inline: auto;
    color: var(--clr-orange-0);
+   padding: 18px 34px;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-align: center;
+   align-items: center;
+   gap: 1.5rem;
+   line-height: 1.3em;
+}
+
+.navigation__link svg {
+   width: 20px;
+   height: 20px;
+   fill: var(--clr-blue-0);
 }
 
 .navigation__link:hover {
@@ -1889,7 +1918,6 @@ button.swiper-pagination-bullet {
 }
 
 .slider__info .slider__wrapp {
-   opacity: 0;
    position: absolute;
    bottom: 0;
    left: 0;
@@ -1961,6 +1989,14 @@ button.swiper-pagination-bullet {
    object-position: center top;
 }
 
+.slider-main .swiper-button-prev {
+   left: 20px;
+}
+
+.slider-main .swiper-button-next {
+   right: 20px;
+}
+
 .slider-minor {
    overflow: hidden;
 }
@@ -1991,6 +2027,7 @@ button.swiper-pagination-bullet {
    position: absolute;
    inset: 0;
    border: 5px solid blue;
+   border-radius: 20px;
 }
 
 .slider-minor__img {
@@ -2292,7 +2329,7 @@ button.swiper-pagination-bullet {
 
 .inclusion-descr__list {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
    -ms-flex-pack: center;
    justify-content: center;
    margin-inline: auto;
@@ -2304,6 +2341,8 @@ button.swiper-pagination-bullet {
 
 .inclusion-descr__item {
    display: list-item;
+   line-height: 1.3em;
+   margin-left: 5px;
 }
 
 .inclusion-descr__item::marker {
@@ -3168,8 +3207,16 @@ button.swiper-pagination-bullet {
       background: url("../images/main/bg-img.jpg") no-repeat center/cover;
    }
 
+   .slider-main__item {
+      height: 46rem;
+   }
+
    .about__title span::after {
       width: 17rem;
+   }
+
+   .about__item {
+      padding-bottom: 6rem;
    }
 
    .explanation__item:not(:first-child) {
@@ -3208,13 +3255,25 @@ button.swiper-pagination-bullet {
       display: none;
    }
 
+   .slider-main__item {
+      height: 36rem;
+   }
+
    .about__title span::after {
       width: 15rem;
+   }
+
+   .about__item {
+      padding-bottom: 5rem;
    }
 
    .inclusion__title {
       text-align: center;
       margin-inline: auto;
+   }
+
+   .inclusion__item {
+      max-width: 39rem;
    }
 
    .explanation-heading {
@@ -3301,6 +3360,10 @@ button.swiper-pagination-bullet {
       width: 14rem;
    }
 
+   .about__item {
+      padding-bottom: 4rem;
+   }
+
    .footer .social__list {
       border-right: none;
       padding-right: 0;
@@ -3339,6 +3402,14 @@ button.swiper-pagination-bullet {
 
    .hero__subtext {
       letter-spacing: 1px;
+   }
+
+   .slider-main__item {
+      height: 38rem;
+   }
+
+   .about__item {
+      padding-bottom: 3rem;
    }
 
    .footer .social__list {
@@ -3382,8 +3453,18 @@ button.swiper-pagination-bullet {
       max-width: 100%;
    }
 
+   .about__item {
+      padding-bottom: 2rem;
+   }
+
    .footer--page .footer__wrapp {
       -ms-flex-direction: column;
       flex-direction: column;
+   }
+}
+
+@media (hover: hover) {
+   .slider__info .slider__wrapp {
+      opacity: 0;
    }
 }

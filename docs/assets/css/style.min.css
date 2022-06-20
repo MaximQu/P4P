@@ -440,9 +440,12 @@ h6 {
   font-weight: var(--fw-700);
 }
 
+h1 {
+  font-size: var(--fz-80);
+}
+
 h2 {
   font-size: var(--fz-32);
-  font-weight: var(--fw-700);
 }
 
 .h2-like {
@@ -452,7 +455,6 @@ h2 {
 
 h3 {
   font-size: var(--fz-32);
-  font-weight: var(--fw-700);
 }
 
 p {
@@ -1849,10 +1851,13 @@ button.swiper-pagination-bullet {
   max-width: 94rem;
 }
 .reminder__text.emphasis {
-  padding: 55px 40px;
+  padding: 49px 35px;
   font-size: var(--fz-24);
   font-weight: var(--fw-200);
-  background: url("../images/svg/sprite/text-bg.svg") no-repeat center;
+  background-image: url("../images/svg/sprite/text-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
   color: var(--white);
   border-radius: 25px;
 }
@@ -2244,6 +2249,8 @@ button.swiper-pagination-bullet {
   position: relative;
   padding-bottom: 5rem;
   margin-bottom: 2rem;
+  max-width: 720px;
+  margin-inline: auto;
 }
 .inclusion-slider__item {
   border-radius: 5rem;
@@ -2260,13 +2267,13 @@ button.swiper-pagination-bullet {
 
 .inclusion-descr__title {
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   padding-bottom: 3px;
   border-bottom: 2px solid rgba(0, 0, 255, 0.1);
   max-width: 60rem;
   margin-inline: auto;
 }
-.inclusion-descr__title--scond {
+.inclusion-descr__title--second {
   border-bottom: none;
 }
 .inclusion-descr__title span {
@@ -2275,6 +2282,25 @@ button.swiper-pagination-bullet {
   margin-inline: auto;
   border-bottom: 2px solid rgba(0, 0, 255, 0.1);
 }
+.inclusion-descr__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-orange-0);
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  margin-inline: auto;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.inclusion-descr__btn:hover {
+  background-color: var(--clr-blue-0);
+}
+.inclusion-descr__btn-icon {
+  transform: rotate(90deg);
+}
 .inclusion-descr__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
@@ -2282,7 +2308,16 @@ button.swiper-pagination-bullet {
   margin-inline: auto;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 64rem;
+  max-width: 59rem;
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  transition: 0.2s linear;
+}
+.inclusion-descr__list.active {
+  height: 100%;
+  opacity: 1;
+  pointer-events: initial;
 }
 .inclusion-descr__item {
   display: list-item;
