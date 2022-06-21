@@ -1274,7 +1274,7 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.2px;
   text-transform: uppercase;
   color: var(--white);
-  border-radius: 50px;
+  border-radius: 100vmax;
   text-align: center;
   border: 2px solid var(--clr-orange-0);
   transition: 0.1s linear;
@@ -1737,6 +1737,13 @@ button.swiper-pagination-bullet {
 .navigation__item.share .navigation__link {
   color: var(--clr-blue-0);
   border-color: var(--clr-blue-0);
+}
+.navigation__item.share .navigation__link:hover {
+  background-color: var(--clr-blue-0);
+  color: var(--white);
+}
+.navigation__item.share .navigation__link:hover svg {
+  fill: var(--white);
 }
 .navigation__link {
   margin-inline: auto;
@@ -2242,6 +2249,7 @@ button.swiper-pagination-bullet {
   position: relative;
   z-index: var(--i-mid);
   line-height: 1.5em;
+  text-align: left;
 }
 
 .inclusion-slider {
@@ -2781,8 +2789,8 @@ button.swiper-pagination-bullet {
   position: fixed;
   inset: 0;
   z-index: var(--i-top);
-  min-height: 100vh;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: none;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
@@ -2803,8 +2811,7 @@ button.swiper-pagination-bullet {
   position: relative;
   z-index: 5;
   border-radius: 15px;
-  padding: 40px 40px;
-  max-width: 55rem;
+  max-width: 54rem;
   margin-inline: auto;
 }
 .modal-window__close {
@@ -2819,7 +2826,7 @@ button.swiper-pagination-bullet {
 .modal-window__title {
   max-width: 36rem;
   margin-inline: auto;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   text-align: center;
   color: var(--white);
   font-size: var(--fz-32);
@@ -2837,20 +2844,21 @@ button.swiper-pagination-bullet {
 .modal-window__form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 50px;
-  padding: 8rem;
+  gap: 3.5rem;
+  padding: 5rem 8rem;
   border: 1px solid var(--white);
   border-radius: 40px;
-  margin-inline: auto;
 }
 .modal-window__form textarea {
   resize: none;
-  height: 10rem;
+  height: 9rem;
   max-width: 36rem;
   width: 100%;
 }
 .modal-window__label {
+  max-width: 36rem;
   width: 100%;
   color: var(--white);
   position: relative;
@@ -2879,7 +2887,7 @@ button.swiper-pagination-bullet {
 }
 .modal-window__btn {
   background-color: var(--clr-orange-0);
-  max-width: 140px;
+  max-width: 230px;
   width: 100%;
 }
 
@@ -2896,5 +2904,10 @@ button.swiper-pagination-bullet {
 @media (max-width: 575.98px) {
   .modal-window__form {
     padding: 4rem;
+  }
+}
+@media (max-width: 480.98px) {
+  .modal-window__text {
+    max-width: 100%;
   }
 }
