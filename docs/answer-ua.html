@@ -46,7 +46,7 @@
    <!-- header -->
    <header class="header header--page">
       <div class="container">
-         <div class="header__inner">
+         <!-- <div class="header__inner">
             <div class="header__block">
                <a href="index.html" class="logo__link">
                   <img src="assets/images/svg/logo.svg" alt="People for people" width="54" height="64" class="logo__img">
@@ -55,7 +55,7 @@
                   <use xlink:href="#restart"></use>
                </svg>
             </div>
-         </div>
+         </div> -->
       </div>
    </header>   <!-- ./header -->
    <!-- main -->
@@ -64,13 +64,40 @@
       <section class="answer">
           <div class="container">
               <div class="answer__inner">
-                  <h2 class="answer__title">Дякуємо за рестарт!
-                      <svg>
-                          <use xlink:href="#heart-icon"></use>
-                      </svg>
-                  </h2>
+                  <h2 class="answer__title h2-like">Дякуємо за рестарт!</h2>
                   <p class="answer__text">Ми отримали твою заявку і накнайшвидше з тобою зв’яжемось!</p>
-                  <a href="index.html" class="answer__link btn">Повернутися до сайту</a>
+                  <span>Зв’язатися з нами</span>
+                  <ul class="answer__list">
+                      <li class="answer__item">
+                          <a href="mailto:" class="answer__link" target="_blank" title="Mail">
+                              <svg class="answer__icon" width="31" height="33">
+                                  <use xlink:href="#mail"></use>
+                              </svg>
+                          </a>
+                      </li>
+                      <li class="answer__item">
+                          <a href="#" class="answer__link" target="_blank" title="Instagram">
+                              <svg class="answer__icon" width="28" height="28">
+                                  <use xlink:href="#instagram"></use>
+                              </svg>
+                          </a>
+                      </li>
+                      <li class="answer__item">
+                          <a href="#" class="answer__link" target="_blank" title="Facebook">
+                              <svg class="answer__icon" width="28" height="28">
+                                  <use xlink:href="#facebook"></use>
+                              </svg>
+                          </a>
+                      </li>
+                  </ul>
+                  <a href="index.html" class="answer__btn btn">Повернутися до сайту</a>
+                  <div class="answer__wrapp">
+                      <img src="assets/images/answer/answer-img-1.svg" alt="Дякуємо за рестарт!" class="answer__img" width="876" height="347" />
+                      <picture>
+                          <source srcset="assets/images/answer/answer-img-2.webp" type="image/webp">
+                          <img src="assets/images/answer/answer-img-2.png" alt="Зв’язатися з нами" class="answer__img" width="546" height="334" />
+                      </picture>
+                  </div>
               </div>
           </div>
       </section>
@@ -80,7 +107,7 @@
    <!-- footer -->
    <footer class="footer footer--page">
       <div class="container">
-         <div class="footer__wrapp">
+         <!-- <div class="footer__wrapp">
             <span class="footer__text">Зв’язатися з нами</span>
             <ul class="social__list">
                <li class="social__item">
@@ -105,7 +132,7 @@
                   </a>
                </li>
             </ul>
-         </div>
+         </div> -->
       </div>
    </footer>   <!-- ./footer -->
    <!-- sprites -->
@@ -360,6 +387,9 @@
          <path
             d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
             stroke="#fff" />
+      </symbol>
+      <symbol viewBox="0 0 512 512" id="mail" xmlns="http://www.w3.org/2000/svg" >
+         <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/>
       </symbol>
    </svg>   <!-- ./sprites -->
 </body>
