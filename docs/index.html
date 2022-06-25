@@ -67,7 +67,7 @@
                      <a href="#implementation" class="nav__link underline">Програма</a>
                   </li>
                   <li class="nav__item">
-                     <a href="#explanation" class="nav__link underline" >Як це працює</a>
+                     <a href="#explanation" class="nav__link underline">Як це працює</a>
                   </li>
                   <li class="nav__item">
                      <a href="#gallery" class="nav__link underline">Фотогалерея</a>
@@ -78,6 +78,16 @@
                   <li class="nav__item">
                      <button class="nav__link underline modal-btn">Хочу до кемпу</button>
                   </li>
+                  <li class="nav__item">
+                     <ul class="lang__list">
+                        <li class="lang__item">
+                           <a href="#" class="lang__link">ENG</a>
+                        </li>
+                        <li class="lang__item active">
+                           <a href="#" class="lang__link">UA</a>
+                        </li>
+                     </ul>
+                  </li>
                </ul>
             </nav>
             <div class="burger__menu">
@@ -86,6 +96,7 @@
                <span></span>
             </div>
             <div class="header__wrapp">
+               <button class="header__btn btn modal-btn">Хочу до кемпу</button>
                <ul class="lang__list">
                   <li class="lang__item">
                      <a href="#" class="lang__link">ENG</a>
@@ -94,7 +105,6 @@
                      <a href="#" class="lang__link">UA</a>
                   </li>
                </ul>
-               <button class="header__btn btn modal-btn">Хочу до кемпу</button>
             </div>
          </div>
       </div>
@@ -108,8 +118,8 @@
               <div class="hero__inner">
                   <h1 class="hero__title">«Рестарт» – сильні люди вільної України</h1>
                   <div class="hero__wrapp">
-                      <a href="#" class="hero__btn btn">Подивитись презентацію</a>
                       <a href="#help" class="hero__btn btn">Підтримати проект</a>
+                      <a href="#" class="hero__btn btn">Подивитись презентацію</a>
                   </div>
               </div>
           </div>
@@ -210,7 +220,12 @@
       <section class="reminder">
           <div class="container">
               <div class="reminder__inner">
-                  <h2 class="reminder__title">Війна триває</h2>
+                  <div class="reminder__heading">
+                      <h2 class="reminder__title">Війна триває</h2>
+                      <svg class="reminder__icon" width="61" height="61">
+                          <use xlink:href="#tripo"></use>
+                      </svg>
+                  </div>
                   <div class="reminder__wrapp">
                       <p class="reminder__text">Люди постійно перебувають під впливом напруги, яка породжує емоційні та психологічні стреси
                       <div class="reminder__emphasis emphasis">
@@ -307,14 +322,8 @@
                   </ul>
                   <div class="swiper-pagination"></div>
                   <div class="swiper-button swiper-button-prev">
-                      <!-- <svg>
-                     <use xlink:href="#arrow-left"></use>
-                  </svg> -->
                   </div>
                   <div class="swiper-button swiper-button-next">
-                      <!-- <svg>
-                     <use xlink:href="#arrow-left"></use>
-                  </svg> -->
                   </div>
               </div>
           </div>
@@ -325,7 +334,7 @@
           <div class="container">
               <div class="about__heading">
                   <h2 class="about__title">Благодійний фонд P4P створив кемп <span>«Рестарт»</span> для вашого відновлення та відпочинку, під час якого на вас чекають:</h2>
-                  <svg width="61" height="61">
+                  <svg width="61" height="61" class="about__icon">
                       <use xlink:href="#tripo"></use>
                   </svg>
               </div>
@@ -337,7 +346,7 @@
                       <div class="about__wrapp">
                           <h3 class="about__name h3-like">Обіди на відкритому повітрі</h3>
                           <p class="about__text">
-                              Ми соціальне підприємництво/благодійна організація, яка увесь дохід спрямовує на розвиток кемпу, на підтримку людей, що виїхали з конфліктних зон
+                              Ми - соціальне підприємництво/благодійна організація, яка увесь дохід спрямовує на розвиток кемпу, на підтримку людей, що виїхали з конфліктних зон
                           </p>
                       </div>
                   </li>
@@ -413,7 +422,7 @@
                       </svg>
                   </div>
                   <ul class="price__list">
-                      <li class="price__item"> Місце під намет/намет свій <span class="price__num">300 грн людина/доба</span>
+                      <li class="price__item">Місце під намет/намет свій <span class="price__num">300 грн людина/доба</span>
                       </li>
                       <li class="price__item">Оренда намету на 2, на 5 та на 8 осіб <span class="price__num">500 грн людина/доба</span>
                       </li>
@@ -541,24 +550,19 @@
       </section>
       <!-- ./amenities -->
       <!-- explanation -->
-      <section class="explanation" id="explanation">
-          <div class="container">
-              <div class="explanation__inner">
-                  <div class="explanation-sidebar">
-                      <h2 class="explanation-sidebar__title">Кожна
-                          <br> твоя гривня конвертується в Благодiйнiсть
-                      </h2>
-                      <div class="explanation-sidebar__descr">
-                          <h2 class="explanation-sidebar__title">Як це працює?</h2>
-                          <p class="explanation-sidebar__text">Усі оплати, донати та гранти розподіляються таким чином:</p>
-                      </div>
-                      <h2 class="explanation-sidebar__title">Стань супергероєм для Українців</h2>
+      <!-- <section class="explanation" id="explanation">
+         <div class="container">
+            <div class="explanation__inner">
+               <div class="explanation-sidebar">
+                  <h2 class="explanation-sidebar__title">Кожна <br> твоя гривня конвертується в Благодiйнiсть</h2>
+                  <div class="explanation-sidebar__descr">
+                     <h2 class="explanation-sidebar__title">Як це працює?</h2>
+                     <p class="explanation-sidebar__text">Усі оплати, донати та гранти розподіляються таким чином:</p>
                   </div>
-                  <div class="explanation-content">
-                      <div class="explanation-content__block">
-                          <img src="assets/images/explanation/explanation-img.svg" class="explanation-content__img" alt="Кожна твоя гривня конвертується в Благодiйнiсть" width="937" height="530" />
-                      </div>
-                      <!-- <ul class="explanation-content__list">
+                  <h2 class="explanation-sidebar__title">Стань супергероєм для Українців</h2>
+               </div>
+               <div class="explanation-content">
+                   <ul class="explanation-content__list">
                      <li class="explanation-content__item">
                         <span class="explanation-content__num">20%</span>
                         <p class="explanation-content__text">
@@ -580,15 +584,15 @@
                            Підтримка та відновлення людей, що виїхали з конфліктних зон
                         </p>
                      </li>
-                  </ul> -->
-                      <div class="explanation-content__wrapp">
-                          <p class="explanation-content__text">Не втрачай нагоди використати цю можливість! Оплати відпочинок в кемпі і подаруй рестарт тим, кому це необхідно</p>
-                          <button class="explanation-content__btn btn modal-btn">Подарувати можливість</button>
-                      </div>
+                  </ul>
+                  <div class="explanation-content__wrapp">
+                     <p class="explanation-content__text">Не втрачай нагоди використати цю можливість! Оплати відпочинок в кемпі і подаруй рестарт тим, кому це необхідно</p>
+                     <button class="explanation-content__btn btn modal-btn">Подарувати можливість</button>
                   </div>
-              </div>
-          </div>
-      </section>
+               </div>
+            </div>
+         </div>
+      </section> -->
       <!-- ./explanation -->
       <!-- gallery -->
       <section class="gallery" id="gallery">
@@ -623,14 +627,8 @@
                           </li>
                       </ul>
                       <div class="swiper-button swiper-button-prev">
-                          <!-- <svg>
-                        <use xlink:href="#arrow-left"></use>
-                     </svg> -->
                       </div>
                       <div class="swiper-button swiper-button-next">
-                          <!-- <svg>
-                        <use xlink:href="#arrow-left"></use>
-                     </svg> -->
                       </div>
                   </div>
                   <div class="slider-minor">
