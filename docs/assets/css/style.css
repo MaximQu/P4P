@@ -3292,8 +3292,8 @@ strong {
       justify-content: center;
       visibility: hidden;
       background-color: rgba(0, 0, 0, 0.2);
-      -webkit-backdrop-filter: blur(35px);
       backdrop-filter: blur(35px);
+      -webkit-backdrop-filter: blur(35px);
       transition-duration: 0.25s;
       position: fixed;
       top: 0;
@@ -3349,6 +3349,10 @@ strong {
 
    .beginning__block {
       max-width: 100%;
+   }
+
+   .info-slider__wrapp {
+      height: 100px;
    }
 
    .about__title span::after {
@@ -4052,6 +4056,11 @@ strong {
 
    .modal-window__form {
       padding: 2rem;
+      gap: 3rem;
+   }
+
+   .modal-window__form textarea {
+      height: 8rem;
    }
 
    .modal-window__text {
@@ -4095,6 +4104,14 @@ strong {
 
    .about__title span::after {
       width: 10rem;
+   }
+
+   .modal-window__form {
+      gap: 2.5rem;
+   }
+
+   .modal-window__form textarea {
+      height: 7rem;
    }
 }
 
