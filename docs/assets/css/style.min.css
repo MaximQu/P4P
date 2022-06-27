@@ -1363,6 +1363,7 @@ button.swiper-pagination-bullet {
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
     transition-duration: 0.25s;
     position: fixed;
     top: 0;
@@ -2959,12 +2960,24 @@ button.swiper-pagination-bullet {
 @media (max-width: 480.98px) {
   .modal-window__form {
     padding: 2rem;
+    gap: 3rem;
+  }
+  .modal-window__form textarea {
+    height: 8rem;
   }
   .modal-window__text {
     max-width: 100%;
   }
   .modal-window__body {
     gap: 3rem;
+  }
+}
+@media (max-width: 375.98px) {
+  .modal-window__form {
+    gap: 2.5rem;
+  }
+  .modal-window__form textarea {
+    height: 7rem;
   }
 }
 .answer {
