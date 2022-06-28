@@ -2604,6 +2604,7 @@ button.swiper-pagination-bullet {
 .help__item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 4rem;
 }
 .help__name:first-of-type {
@@ -2959,9 +2960,28 @@ button.swiper-pagination-bullet {
   max-width: 49rem;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1399.98px) {
   .modal-window__form {
     gap: 4rem;
+    padding: 3rem;
+  }
+  .modal-window__form textarea {
+    height: 6rem;
+  }
+  .modal-window__close {
+    top: -60px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .modal-window__form {
+    gap: 3rem;
+    padding: 2rem 3rem;
+  }
+  .modal-window__form textarea {
+    height: 6rem;
+  }
+  .modal-window__close {
+    top: -60px;
   }
 }
 @media (max-width: 991.98px) {

@@ -3353,6 +3353,7 @@ strong {
 
    .info-slider__wrapp {
       height: 100px;
+      padding: 15px 20px;
    }
 
    .about__title span::after {
@@ -3517,6 +3518,11 @@ strong {
 
    .reminder__icon {
       display: block;
+   }
+
+   .info-slider__wrapp {
+      height: 90px;
+      padding: 5px 10px;
    }
 
    .slider-main__item {
@@ -3880,6 +3886,11 @@ strong {
       max-width: 100%;
    }
 
+   .info-slider__wrapp {
+      height: 70px;
+      padding: 5px 10px;
+   }
+
    .slider-minor__list {
       gap: 2rem;
    }
@@ -3999,6 +4010,10 @@ strong {
       margin-bottom: 15rem;
    }
 
+   .reminder__wrapp {
+      gap: 2rem;
+   }
+
    .slider-main__item {
       height: 38rem;
    }
@@ -4009,6 +4024,14 @@ strong {
 
    .about__title span::after {
       width: 11rem;
+   }
+
+   .about__item {
+      gap: 2rem;
+   }
+
+   .about__item svg {
+      min-width: 60px;
    }
 
    .amenities__item {
@@ -4104,6 +4127,10 @@ strong {
 
    .about__title span::after {
       width: 10rem;
+   }
+
+   .about__item svg {
+      min-width: 50px;
    }
 
    .modal-window__form {
