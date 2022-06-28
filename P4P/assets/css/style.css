@@ -3306,7 +3306,7 @@ strong {
       -ms-flex-pack: center;
       justify-content: center;
       visibility: hidden;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(35px);
       -webkit-backdrop-filter: blur(35px);
       transition-duration: 0.25s;
@@ -4015,7 +4015,7 @@ strong {
    }
 
    .hero__title {
-      margin-bottom: 3rem;
+      margin-bottom: 10rem;
    }
 
    .hero__subtext {
