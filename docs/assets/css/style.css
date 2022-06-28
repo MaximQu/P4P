@@ -2408,6 +2408,8 @@ button.swiper-pagination-bullet {
    display: flex;
    -ms-flex-direction: column;
    flex-direction: column;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
    gap: 4rem;
 }
 
@@ -3250,6 +3252,19 @@ strong {
    .help__text {
       max-width: 55rem;
    }
+
+   .modal-window__form {
+      gap: 4rem;
+      padding: 3rem;
+   }
+
+   .modal-window__form textarea {
+      height: 6rem;
+   }
+
+   .modal-window__close {
+      top: -60px;
+   }
 }
 
 @media (max-width: 1199.98px) {
@@ -3469,7 +3484,16 @@ strong {
    }
 
    .modal-window__form {
-      gap: 4rem;
+      gap: 3rem;
+      padding: 2rem 3rem;
+   }
+
+   .modal-window__form textarea {
+      height: 6rem;
+   }
+
+   .modal-window__close {
+      top: -60px;
    }
 
    .answer__img:first-child {
@@ -3657,10 +3681,6 @@ strong {
 
    .share-block__wrapp .share-block__text {
       text-align: left;
-   }
-
-   .modal-window__form {
-      padding: 5rem;
    }
 
    .answer__img:first-child {
@@ -3947,10 +3967,6 @@ strong {
       border-right: none;
    }
 
-   .modal-window__form {
-      padding: 4rem;
-   }
-
    section {
       padding: 3.5rem 0;
    }
@@ -4079,11 +4095,6 @@ strong {
 
    .modal-window__form {
       padding: 2rem;
-      gap: 3rem;
-   }
-
-   .modal-window__form textarea {
-      height: 8rem;
    }
 
    .modal-window__text {
@@ -4135,10 +4146,6 @@ strong {
 
    .modal-window__form {
       gap: 2.5rem;
-   }
-
-   .modal-window__form textarea {
-      height: 7rem;
    }
 }
 
