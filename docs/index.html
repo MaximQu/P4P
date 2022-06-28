@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk" prefix="og: http://ogp.me/ns#">
+
 <head>
    <meta charset="UTF-8">
    <!-- Fonts -->
@@ -42,6 +43,7 @@
    <script src="assets/js/main.js" type="module"></script>
    <!-- ./scripts -->
 </head>
+
 <body>
    <!-- header -->
    <header class="header">
@@ -590,7 +592,7 @@
                       </ul>
                       <div class="explanation-content__wrapp">
                           <p class="explanation-content__text">Не втрачай нагоди використати цю можливість! Оплати відпочинок в кемпі і подаруй рестарт тим, кому це необхідно</p>
-                          <button class="explanation-content__btn btn modal-btn">Подарувати можливість</button>
+                          <button class="explanation-content__btn btn modal-btn">Хочу до кемпу</button>
                       </div>
                   </div>
               </div>
@@ -1098,5 +1100,28 @@
          <path d="M986.5 95.822C986.5 113.495 972.173 127.822 954.5 127.822H32C14.3269 127.822 0 113.495 0 95.822V56.9753C0 43.0835 11.2615 31.8221 25.1533 31.8221C27.8933 31.8221 29.9054 29.2494 29.2452 26.59L23.4922 3.41628C22.9463 1.21709 25.4337 -0.472427 27.2768 0.845703L67.0755 29.3081C69.3615 30.9431 72.1017 31.8221 74.9122 31.8221H954.5C972.173 31.8221 986.5 46.1489 986.5 63.822V95.822Z" fill="#0000FF"/>
       </symbol>
    </svg>   <!-- ./sprites -->
+   <script type='text/javascript'>
+      (function (I, L, T, i, c, k, s) {
+         if (I.iticks) return;
+         I.iticks = {
+            host: c,
+            settings: s,
+            clientId: k,
+            cdn: L,
+            queue: []
+         };
+         var h = T.head || T.documentElement;
+         var e = T.createElement(i);
+         var l = I.location;
+         e.async = true;
+         e.src = (L || c) + '/client/inject-v2.min.js';
+         h.insertBefore(e, h.firstChild);
+         I.iticks.call = function (a, b) {
+            I.iticks.queue.push([a, b]);
+         };
+      })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com',
+         'EwTgSTZMXgcYyhxf2_c', {});
+   </script>
 </body>
+
 </html>
